@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pistol 1911
+* source:	https://sketchfab.com/3d-models/pistol-1911-8e0860d318314e9286be34f4ab7d2207
+* author:	matoteus (https://sketchfab.com/matoteus)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pistol 1911" (https://sketchfab.com/3d-models/pistol-1911-8e0860d318314e9286be34f4ab7d2207) by matoteus (https://sketchfab.com/matoteus) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
