@@ -1,0 +1,11 @@
+Model Information:
+* title:	RayGun - Call of Duty Zombies
+* source:	https://sketchfab.com/3d-models/raygun-call-of-duty-zombies-927ef1106e5f4ddd9aa45d64ce072991
+* author:	PortePetit (https://sketchfab.com/portepetit01)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RayGun - Call of Duty Zombies" (https://sketchfab.com/3d-models/raygun-call-of-duty-zombies-927ef1106e5f4ddd9aa45d64ce072991) by PortePetit (https://sketchfab.com/portepetit01) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

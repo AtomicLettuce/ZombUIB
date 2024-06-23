@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Roboto'; /* Specify the font family name */
+    src: url('fonts/Roboto-Regular.ttf')  /* Specify the path to your font files */
+    /* Add more src lines for different font formats if needed */
+}
+
+@font-face {
+    font-family: 'dejavu'; /* Specify the font family name */
+    src: url('fonts/DejaVuSans.ttf') ;
+}
+@font-face {
+    font-family: 'Monoid'; /* Specify the font family name */
+    src: url('fonts/Monoid.fnt') ;
+}
+@font-face {
+    font-family: 'DejaVu-sdf'; /* Specify the font family name */
+    src: url('fonts/DejaVu-sdf.fnt') ;
+}
+
+#hud-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    /* Allow interaction with A-Frame scene behind the HUD */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* Align at the bottom */
+    padding: 10px;
+}
+
+/* Style for text */
+#displayRound {
+    color: RED;
+    font-family: 'Arial', sans-serif;
+    font-size: 8vw;
+    margin: 50px;
+    margin-top: 50px;
+}
+#displayAmmo {
+    color: RED;
+    font-family: 'Arial', sans-serif;
+    font-size: 4vw;
+    margin: 50px;
+    margin-top: 50px;
+}
+#displayHP{
+    color: RED;
+    font-family: 'Arial', sans-serif;
+    font-size: 2vw;
+    margin: 50px;
+    margin-top: 50px;
+}

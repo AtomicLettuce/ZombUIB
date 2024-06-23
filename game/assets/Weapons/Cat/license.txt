@@ -1,0 +1,11 @@
+Model Information:
+* title:	THE CAT'S BODY
+* source:	https://sketchfab.com/3d-models/the-cats-body-04ae93d572904be8b7d53a6ccb71c433
+* author:	ippolitagalloeft (https://sketchfab.com/ippolitagalloeft)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "THE CAT'S BODY" (https://sketchfab.com/3d-models/the-cats-body-04ae93d572904be8b7d53a6ccb71c433) by ippolitagalloeft (https://sketchfab.com/ippolitagalloeft) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
