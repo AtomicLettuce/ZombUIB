@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="lib/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene id="myScene" inspector-plugin-recast>
+        <a-entity id="cameraRig" position="-50 0 -38">
+            <a-camera id="myCamera" position="0 1 0" look-controls raycaster="objects: .clickable;">
+                <a-cursor overlay intersection-spawn="event: click; mixin: voxel" ;></a-cursor>
+            </a-camera>
+        </a-entity>
+
+
+        <!-- <a-plane width="200" height="200" position="0 0 0" color="#ababab" rotation="-90 0 0"></a-plane> -->
+
+        <!-- CLASS SELECTION LOBBY -->
+        <!-- Lobby walls -->
+        <a-box position="-50 12.5 -50" color="#000" width="25" depth="1" height="25"></a-box>
+        <a-box position="-50 12.5 -25" color="#000" width="25" depth="1" height="25"></a-box>
+        <a-box position="-37.5 12.5 -37.5" color="#000" rotation="0 90 0" width="25" depth="1" height="25"></a-box>
+        <a-box position="-62.5 12.5 -37.5" color="#000" rotation="0 90 0" width="25" depth="1" height="25"></a-box>
+
+
+        <!-- Instructions & Explanaition -->
+        <a-text value="Select Your Loadout" color="#ffffff" align="center" scale="5 5 5" position="-50 2 -47"
+            side="double"></a-text>
+
+        <a-entity gltf-model="navimesh.glb" position="-50 0.5 -37.5" color="#ffff00" rotation="0 -90 0" scale="0.5 0.5 0.5"></a-entity>
+        <!-- Keyboard and registration -->
+
+
+        <!-- Lobby stands -->
+        <!-- Stand 1 -->
+        <a-box position="-57.546875 0.4 -45.046875" color="#ffffff" width="0.5" depth="0.5" height="0.8">
+            <a-text value="Select Class" color="#000" align="center" scale="0.4 0.4 0.4" position="0 0.3 0.25"></a-text>
+            <a-text value="Infantry" color="#000" align="center" scale="0.3 0.3 0.3" position="0 0.1 0.25"></a-text>
+            <a-box position="0 0.4 0" color="#F03000" width="0.175" depth="0.175" height="0.175"></a-box>
+        </a-box>
+
+        <!-- Stand 2 -->
+        <a-box position="-52.5925 0.4 -45.046875" color="#ffffff" width="0.5" depth="0.5" height="0.8">
+            <a-text value="Select Class" color="#000" align="center" scale="0.4 0.4 0.4" position="0 0.3 0.25"></a-text>
+            <a-text value="Gunslinger" color="#000" align="center" scale="0.3 0.3 0.3" position="0 0.1 0.25"></a-text>
+            <a-box position="0 0.4 0" color="#F03000" width="0.175" depth="0.175" height="0.175"></a-box>
+        </a-box>
+
+
+        <!-- Stand 3 -->
+        <a-box position="-47.4 0.4 -45.046875" color="#ffffff" width="0.5" depth="0.5" height="0.8">
+            <a-text value="Select Class" color="#000" align="center" scale="0.4 0.4 0.4" position="0 0.3 0.25"></a-text>
+            <a-text value="Alternate Universe" color="#000" align="center" scale="0.27 0.27 0.27"
+                position="0 0.1 0.25"></a-text>
+                <a-box position="0 0.4 0" color="#F03000" width="0.175" depth="0.175" height="0.175"></a-box>
+        </a-box>
+
+
+        <!-- Stand 4 -->
+        <a-box id="box4" position="-42.45 0.4 -45.046875" color="#ffffff" width="0.5" depth="0.5" height="0.8">
+            <a-text value="Select Class" color="#000" align="center" scale="0.4 0.4 0.4" position="0 0.3 0.25"></a-text>
+            <a-text value="Veterinarian" color="#000" align="center" scale="0.3 0.3 0.3" position="0 0.1 0.25"></a-text>
+            <a-box position="0 0.4 0" color="#F03000" width="0.175" depth="0.175" height="0.175"></a-box>
+        </a-box>
+    </a-scene>
+</a-entity>
+
+</body>
+
+</html>

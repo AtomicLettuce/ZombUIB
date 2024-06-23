@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="lib/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <!-- CAMERA RIG -->
+        <a-entity id="cameraRig" position="0 0 0">
+            <a-entity camera wasd-controls look-controls id="myCamera" position="0 1 0">
+                <a-cursor overlay></a-cursor>
+            </a-entity>
+        </a-entity>
+        <!-- HANDS -->
+        <a-entity id="leftHand" laser-controls="hand: left;">
+        </a-entity>
+        <a-entity id="rightHand" laser-controls="hand: right;">
+        </a-entity>
+
+        <a-box position="0 0 0" depth="1" height="1" width="1" color="#ff0000" onclick="new Audio('Zombies/alarm.mp3').play();"></a-box>
+
+
+        <a-entity position="0 0 0" rotation="90 0 0"
+            irregular-polygon="vertices: 0 0 0, 1 0 4, 3 0 5, 3 0 3, 4 0 3, 4 0 0;"
+            material="color: #FF5733;"></a-entity>
+        <a-box position="0 0 0" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+        <a-box position="1 0 4" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+        <a-box position="3 0 5" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+        <a-box position="3 0 3" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+        <a-box position="4 0 3" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+        <a-box position="4 0 0" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+
+        <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="green"
+            rotation="-90 0 0"></a-plane>
+    </a-scene>
+</body>
+
+</html>

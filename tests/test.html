@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="https://codechangers.com/physics.js"></script>
+  <script>
+    AFRAME.registerComponent('n-sided-polygon', {
+      schema: {
+        sides: { type: 'number', default: 6 }, // Number of sides
+        radius: { type: 'number', default: 1 } // Radius of the polygon
+      },
+      init: function () {
+        var sides = this.data.sides;
+        var radius = this.data.radius;
+
+        // Define vertices of the polygon
+        var vertices = [];
+        for (var i = 0; i < sides; i++) {
+          var angle = (2 * Math.PI * i) / sides;
+          var x = radius * Math.cos(angle);
+          var y = radius * Math.sin(angle);
+          vertices.push({ x: x, y: y, z: 0 });
+        }
+
+        // Create a new geometry
+        var geometry = new THREE.Geometry();
+        for (var i = 0; i < vertices.length; i++) {
+          geometry.vertices.push(new THREE.Vector3(vertices[i].x, vertices[i].y, vertices[i].z));
+        }
+
+        // Define faces of the polygon
+        for (var i = 0; i < sides - 2; i++) {
+          geometry.faces.push(new THREE.Face3(0, i + 1, i + 2));
+        }
+
+        // Compute normals for shading
+        geometry.computeFaceNormals();
+
+        // Set the geometry to the entity
+        this.el.setObject3D('mesh', new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ color: 0x00ff00 })));
+      }
+    });
+  </script>
+
+<script>
+  AFRAME.registerComponent('irregular-polygon', {
+      schema: {
+          vertices: { type: 'string', default: '' } // Comma-separated list of vertex coordinates
+      },
+      init: function () {
+          const vertices = this.data.vertices.split(',').map(coord => coord.trim().split(' ').map(parseFloat));
+          const shape = new THREE.Shape(vertices.map(v => new THREE.Vector3(v[0], v[2]))); // Use X and Z coordinates
+          const geometry = new THREE.ShapeGeometry(shape);
+          const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, side: THREE.DoubleSide });
+          const mesh = new THREE.Mesh(geometry, material);
+          this.el.object3D.add(mesh);
+      }
+  });
+</script>
+</head>
+
+<body>
+  <a-scene id="myScene">
+    <a-entity environment="preset:forest;"></a-entity>
+    <!-- <a-entity n-sided-polygon position="0 3 0"></a-entity> -->
+    <a-entity  position="0 0 0" rotation="90 0 0" irregular-polygon="vertices: 0 0 0, 1 0 4, 3 0 5, 3 0 3, 4 0 3, 4 0 0;" material="color: #FF5733;"></a-entity>
+    <a-box position="0 0 0" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+    <a-box position="1 0 4" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+    <a-box position="3 0 5" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+    <a-box position="3 0 3" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+    <a-box position="4 0 3" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+    <a-box position="4 0 0" depth="0.05" height="0.05" width="0.05" color="#ffffff"></a-box>
+
+    <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="black"
+      rotation="-90 0 0"></a-plane>
+    <a-camera id="myCamera" position="0 1 0">
+      <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
+    </a-camera>
+    <a-icosahedron staic-body class="target" color="white" radius="1" position="0 3 -5"></a-icosahedron>
+  </a-scene>
+</body>
+<script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
+
+</html>
